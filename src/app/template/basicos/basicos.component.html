@@ -1,4 +1,4 @@
-<h2>Template: Básicos</h2>
+<h2>Template: <small>Básicos</small></h2>
 <hr>
 
 <div class="row">
@@ -13,9 +13,9 @@
                 <div class="col-sm-9">
                     <input type="text"
                             class="form-control"
-                            ngModel
+                            [ngModel]="initForm.producto"
                             name="producto"
-                            placeholder="Nombre del prodcuto"
+                            placeholder="Nombre del producto"
                             required
                             minlength="3">
 
@@ -36,9 +36,9 @@
                 <div class="col-sm-9">
                     <input type="number"
                             class="form-control"
-                            ngModel
+                            [ngModel]="initForm.precio"
                             name="precio"
-                            placeholder="Precio del prodcuto"
+                            placeholder="Precio del producto"
                             required
                             min="0">
                     <span class="form-text text-danger"
@@ -53,11 +53,11 @@
                 <div class="col-sm-9">
                     <input type="number"
                             class="form-control"
-                            ngModel
+                            [ngModel]="initForm.existencias"
                             name="existencias"
                             customMin
                             [minimo]="0"
-                            placeholder="Existencias del prodcuto"
+                            placeholder="Existencias del producto"
                             required>
                     <span class="form-text text-danger"
                             *ngIf="existenciasValido()"> 
