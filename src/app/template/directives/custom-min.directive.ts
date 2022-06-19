@@ -19,6 +19,7 @@ export class CustomMinDirectve implements Validator{
         const inputValue = control.value;
 
         console.log(inputValue);
+        console.log(this.minimo);
 
         return (inputValue < this.minimo)
                 ? {'customMin': true}
